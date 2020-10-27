@@ -1,16 +1,15 @@
 {
     "name": "thiscatexists",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "thiscatexists",
     "scripts": {},
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/peterjcole/thiscatexists"
     },
     "keywords": [],
     "author": "Peter Cole",
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/peterjcole/thiscatexists/issues"
     },
