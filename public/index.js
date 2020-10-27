@@ -1,5 +1,3 @@
-require('normalize.css/normalize.css')
-require('./styles/index.scss')
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch('/api/cat').then(res => res.json()).then(json => {
