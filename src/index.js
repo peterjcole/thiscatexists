@@ -1,19 +1,16 @@
-
-require('normalize.css/normalize.css');
-require('./styles/index.scss');
+require('normalize.css/normalize.css')
+require('./styles/index.scss')
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('/api/cat').then(res => res.json()).then(json => handleCat(json))
+    fetch('/api/cat').then(res => res.json()).then(json => {
+        const catPic = document.getElementById('cat-pic')
+        catPic.src = json.imageUrl
+        catPic.style.visibility = 'visible'
+
+        const [photoLink, authorLink] = document.querySelectorAll('#cat-tion a')
+        photoLink.setAttribute('href', json.pexelsUrl)
+        authorLink.setAttribute('href', json.photographerUrl)
+        authorLink.innerText = json.photographer
+        document.getElementById('cat-tion').classList.remove('hidden')
+    })
 });
-
-function handleCat(json) {
-    Window.cat = json
-    const catPic = document.getElementById('cat-pic')
-    catPic.src = json.imageUrl
-    catPic.style.visibility = 'visible'
-    document.getElementById('cat-tion').innerHTML = buildCaption(json)
-}
-
-function buildCaption(json) {
-    return `<a href="${json.pexelsUrl}">Photo</a> by <a href="${json.photographerUrl}">${json.photographer}</a> on Pexels`
-}
