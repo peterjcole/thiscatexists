@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     fetch('/api/cat').then(res => res.json()).then(json => {
         const image = new Image()
