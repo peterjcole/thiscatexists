@@ -11,7 +11,7 @@ function handleCat(json) {
     const catPic = document.getElementById('cat-pic')
     catPic.src = json.imageUrl
     catPic.style.visibility = 'visible'
-    document.getElementById('cat-caption').innerHTML = buildCaption(json)
+    document.getElementById('cat-tion').innerHTML = buildCaption(json)
 }
 
 function buildCaption(json) {
