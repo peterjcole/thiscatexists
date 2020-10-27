@@ -15,33 +15,65 @@ main {
     padding: 0 .5em;
 }
 
+main > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 footer {
     text-align: center;
     font-size: 0.8em;
 }
 
 .cat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    animation: appear 0.3s ease-out;
+}
+
+.hidden {
+    display:none;
 }
 
 .cat-pic {
-    width: 100%;
-    visibility: hidden;
-}
+    max-width: 100%;
 
-#cat-tion {
     transition: opacity 0.3s ease-out;
     opacity: 1.0;
 }
 
-#cat-tion.hidden {
-    opacity: 0;
+.loading {
+    height: 24px;
+    line-height: 24px;
+    transform-origin: center center;
+
+    animation: whirl;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation: whirl;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
 }
 
 a {
     color: #395E66;
 }
 
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+@keyframes whirl {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
