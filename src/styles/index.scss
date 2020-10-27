@@ -31,6 +31,15 @@ footer {
     visibility: hidden;
 }
 
+#cat-tion {
+    transition: opacity 0.3s ease-out;
+    opacity: 1.0;
+}
+
+#cat-tion.hidden {
+    opacity: 0;
+}
+
 a {
     color: #395E66;
 }
