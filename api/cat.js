@@ -12,7 +12,9 @@ module.exports = (req, res) => {
     })
         .then(res => res.json())
         .then(json => res.json({
-            ...json.photos[0],
             imageUrl: `${json.photos[0].src.original}?auto=compress&cs=tinysrgb&dpr=2&h=300`,
+            pexelsUrl: json.photos[0].url,
+            photographer: json.photos[0].photographer,
+            photographerUrl: json.photos[0].photographer_url,
         }))
 }
