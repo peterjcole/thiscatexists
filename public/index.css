@@ -16,7 +16,6 @@ html {
 	height: 100%;
 
 	font-size: 16px;
-	-webkit-font-smoothing: antialiased;
 	overflow-wrap: break-word;
 }
 
@@ -52,7 +51,7 @@ main {
 
 footer {
 	text-align: center;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 }
 
 .cat {
