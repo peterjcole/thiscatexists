@@ -1,14 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Trispace:wght@100&display=swap");
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Trispace", sans-serif;
+	src: url();
+}
+
 html {
+	--color-text: #5a5a5a;
+	--color-highlight: #395e66;
 	height: 100%;
+
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	overflow-wrap: break-word;
 }
 
 body {
 	height: 100%;
 	font-family: "Trispace", sans-serif;
-	color: #5a5a5a;
-	font-size: 16px;
+	color: var(--color-text);
 }
 
 main {
@@ -16,7 +30,7 @@ main {
 	display: grid;
 	grid-template-rows: 1fr auto;
 
-	padding: 0 0.5em;
+	padding: .5rem;
 }
 
 main > div:first-child {
@@ -27,10 +41,13 @@ main > div:first-child {
 
 footer {
 	text-align: center;
-	font-size: 0.8em;
+	font-size: 0.8rem;
 }
 
 .cat {
+	width: 100%;
+    text-align: center;
+
 	animation: appear 0.3s ease-out;
 }
 
@@ -38,8 +55,13 @@ footer {
 	display: none;
 }
 
+figure {
+	margin: 0;
+}
+
 .cat-pic {
 	max-width: 100%;
+	max-height: 70vh;
 
 	transition: opacity 0.3s ease-out;
 	opacity: 1;
@@ -47,12 +69,9 @@ footer {
 
 .loading {
 	height: 24px;
-	line-height: 24px;
-	transform-origin: center center;
+	line-height: 1;
+	transform-origin: center 40%;
 
-	animation: whirl;
-	animation-play-state: running;
-	animation-iteration-count: infinite;
 	animation: whirl;
 	animation-play-state: running;
 	animation-iteration-count: infinite;
@@ -61,7 +80,7 @@ footer {
 }
 
 a {
-	color: #395e66;
+	color: var(--color-highlight);
 }
 
 @keyframes appear {
